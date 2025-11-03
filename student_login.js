@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
+
+    
     // Email format validation 
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
 
@@ -57,3 +59,4 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
