@@ -1,6 +1,7 @@
 
 
 document.addEventListener("DOMContentLoaded", function () {
+  
   const form = document.querySelector("form");
   const email = document.getElementById("email");
   const password = document.getElementById("password");
@@ -10,17 +11,20 @@ document.addEventListener("DOMContentLoaded", function () {
     email.value = email.value.trim();
     password.value = password.value.trim();
 
+    const strongPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+
     
     if (email.value === "" || password.value === "") {
+      
       alert("All fields are required.");
       e.preventDefault();
       return;
+      
     }
 
 
-    
-    // Email format validation 
-    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
 
     if (!emailPattern.test(email.value)) {
 
@@ -33,8 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Strong password validation
     // at least 8 characters long , with uppercase, lowercase, number, and special characters
-
-    const strongPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
     if (!strongPassword.test(password.value)) {
 
@@ -59,4 +61,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
 
