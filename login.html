@@ -1,7 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login As</title>
 
+  <style>
+    /* General Page Styling */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
 
-<p>Login As</p>
+    /* Container */
+    .container {
+      background: #fff;
+      padding: 40px 60px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
 
-<a href="student_login.html">Student</a>
-<a href="faculty_login.html">Faculty</a>
-<a href="faculty_intern_login.html">Faculty Intern</a>
+    /* Heading */
+    .container p {
+      font-size: 24px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    /* Links (styled as buttons) */
+    .container a {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #4f8cff;
+      color: white;
+      font-weight: 500;
+      padding: 12px 25px;
+      border-radius: 10px;
+      margin: 10px;
+      transition: all 0.3s ease;
+    }
+
+    /* Hover Effect */
+    .container a:hover {
+      background-color: #3568d4;
+      transform: scale(1.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .container {
+        width: 80%;
+        padding: 30px;
+      }
+
+      .container a {
+        display: block;
+        margin: 10px auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <p>Login As</p>
+    <a href="student_login.html">Student</a>
+    <a href="faculty_login.html">Faculty</a>
+    <a href="faculty_intern_login.html">Faculty Intern</a>
+  </div>
+</body>
+</html>
