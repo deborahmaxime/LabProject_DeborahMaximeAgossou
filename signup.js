@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!namePattern.test(username.value)) {
 
-      alert("Username should only contain letters and spaces.");
+      alert("Username should only contain letters and spaces");
       e.preventDefault();
       return;
 
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!emailPattern.test(email.value)) {
 
-      alert("Please enter a valid email address.");
+      alert("Please enter a valid email address");
       e.preventDefault();
       return;
 
@@ -81,4 +81,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 });
+
 
