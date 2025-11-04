@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const strongPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     
-    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
 
     
     if (email.value === "" || password.value === "") {
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!emailPattern.test(email.value)) {
 
-      alert("Please enter a valid email address.");
+      alert("Please enter a valid email address");
       e.preventDefault();
 
       return;
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!strongPassword.test(password.value)) {
 
       alert(
-        "Password must be at least 8 characters long , with uppercase, lowercase, number, and special characters."
+        "Password must be at least 8 characters long , with uppercase, lowercase, number, and special characters"
       );
       e.preventDefault();
 
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     if (password.value.length < 8) {
 
-      alert("Password must be at least 8 characters long.");
+      alert("Password must be at least 8 characters long");
       e.preventDefault();
       return;
 
@@ -61,5 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
 
 
