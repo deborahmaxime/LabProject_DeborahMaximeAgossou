@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const rolePattern = /^[A-Za-z\s]+$/;
 
     const namePattern = /^[A-Za-z\s]+$/;
+
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
     
     if (
       username.value === "" || role.value === "" || email.value === "" || password.value === "") {
@@ -50,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     
-    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
 
     if (!emailPattern.test(email.value)) {
 
@@ -80,3 +81,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 });
+
